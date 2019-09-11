@@ -1,5 +1,6 @@
-FROM debian:9
-# FROM arm64=arm64v8/debian:9
+# FROM debian:9
+FROM arm64=arm64v8/debian:9
+COPY --from=biarms/qemu-bin /usr/bin/qemu-arm-static /usr/bin/qemu-arm-static
 
 ARG DAPPER_HOST_ARCH
 ARG DOWNLOADS_DIR=/usr/src/downloads
